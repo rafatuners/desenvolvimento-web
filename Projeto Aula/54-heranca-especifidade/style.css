@@ -1,0 +1,20 @@
+/* 4º geral */
+*{
+    color: red;
+}
+
+/* 3º */
+h2{
+    color: blue;
+}
+
+/* 2º class */
+h2.verde{
+    color: green;
+}
+
+/* 1º ID */
+h2#amarelo{
+    color: yellowgreen;
+    background: black;
+}
