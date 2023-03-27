@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* Barra de navegação vertial */
+/*
+ul{    
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+li{
+    padding: 5px 20px;
+    
+    background: url(imagens/seta.png) no-repeat left center;
+}
+*/
+
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+ul a{
+    width: 200px;
+    height: 40px;
+    display: block;
+    color: black;
+    text-indent: 40px;
+    line-height: 40px;    
+    background: url(imagens/menu.png) no-repeat left bottom;
+    text-decoration: none;
+}
+
+a:hover{
+    background-position: right bottom;
+    color: white;
+}
