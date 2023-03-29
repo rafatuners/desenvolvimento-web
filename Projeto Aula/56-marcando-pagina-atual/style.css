@@ -41,7 +41,9 @@ a:hover{
 
 #home #navegacao .home a,
 #sobre .sobre a,
-#servicos .servicos a{
+#servicos .servicos a,
+#noticias .noticias a,
+#contato .contato a{
     background-position: right bottom;
     background-color: #f99200;
     color: white;
