@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade para fixação</title>
+    <script>
+
+        var nome = prompt('Digite o seu nome:')
+        var altura = prompt('Informe sua altura (cm)')
+        var peso = prompt('Informe o seu peso:')
+        
+        altura = parseFloat(altura)
+        peso = parseFloat(peso)
+
+        altura = altura / 100
+
+        var M = peso / (altura ^ 2)
+
+        
+        if (M < 16) {
+            m = 'Baixo peso muito grave'
+        } else if (M >=16 && M < 16.99) {
+            m ='Baixo peso grave'            
+        } else if (M >=17 && M < 18.49) {
+            m = 'Baixo peso'
+        } else if (M >= 18.50 && M < 24.99) {
+            m = 'Peso normal'
+        } else if (M >= 25 && M < 29.99) {
+            m = 'Sobrepeso'
+        } else if (M >= 30 && M < 34.99) {
+            m = 'Obsesidade grau I'
+        } else if (M >= 35 && M < 39.99) {
+            m = 'Obesidade grau II'
+        } else {
+            m = 'Obesidade grau III'
+        }
+        
+        document.write(`${nome} possui índice de massa corporal igual a ${M}, sendo classificado como: ${m}`)
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
