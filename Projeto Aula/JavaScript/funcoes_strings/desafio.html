@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Desafio</title>
+    <script>
+
+        function calculo(n1, operacao, n2){
+            var n1 = parseInt(n1)
+            var n2 = parseInt(n2)
+
+            var resultado = 0
+
+            if (operacao == 'soma'){
+                resultado = n1 + n2
+            } else if (operacao == 'subtração'){
+                resultado = n1 - n2
+            } else{
+                alert('Operação inválida!')
+            }
+             return resultado            
+        }
+
+        var n1 = prompt('Digite um número: ')
+        var operacao = prompt('Deseja soma ou subtração?')
+        var n2 = prompt('Digite outro número: ')
+
+        document.write('O resultado é: ' + calculo(n1, operacao, n2))
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
