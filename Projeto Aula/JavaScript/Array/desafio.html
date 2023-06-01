@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Array Desafio</title>
+    <script>
+
+        var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+
+        function adicionarObjetos() {
+            //Recupera o valor inserido no campo id texto
+            var objeto = document.getElementById('texto').value
+
+            // Verifica se foi informado algum valor
+            if (objeto == ''){
+                alert('Informe um valor válido')
+            } else {
+                // Verifica se o objeto já existe
+                if (objetos.indexOf(objeto) === -1){
+                    // adiciona objeto
+                    objetos.push(objeto)
+                    console.log(objetos)
+                    // zera o campo de texto
+                    document.getElementById('texto').value = ''
+                } else {
+                    // Informa que o objeto já foi adicionado
+                    alert('Objeto já foi adicionado')
+                }
+            }
+        }
+
+        function ordenacao() {
+            objetos.sort()
+            console.log(objetos)
+        }
+
+
+    </script>
+</head>
+<body>
+   <input type="text" id="texto"> 
+   <button onclick="adicionarObjetos()" id="adicionar">Adicionar</button>
+   <button onclick="ordenacao()" id="ordenar">Ordenar</button>
+</body>
+</html>
