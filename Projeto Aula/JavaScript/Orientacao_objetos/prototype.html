@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //avião
+        //atributos cor e modelo; método levantarVoo
+
+        //objeto literal
+        let a1 = {
+            cor: 'branco',
+            modelo: 'Airbus A380',
+            levantarVoo: function() { console.log('Levantar Voo') }
+        }
+
+        //função contrutora
+        let AviaoF = function() {
+            this.cor = 'Azul',
+            this.modelo = 'Boeing 787',
+            this.levantarVoo = function(){ console.log('Levantar Voo')}
+        }
+
+        let a2 = new AviaoF()
+
+        //classe
+        class AviaoC {
+            constructor() {
+                this.cor = 'Vermelho',
+                this.modelo = 'Embraer E-jets'
+            }
+
+            levantarVoo() {
+            console.log('Levantar Voo')
+            }
+        }
+       
+
+        let a3 = new AviaoC()
+
+        console.log(a1)
+        console.log(a2)
+        console.log(a3)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
