@@ -17,6 +17,10 @@
 				height: 80px;
 				background-color: blue;
 			}
+
+			.inputFocado {
+				background-color: #ff0000;
+			}
 		</style>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -97,6 +101,8 @@
 						$(e.target).val(txt)
 					}
 				})
+
+				
 				
 
 				/*
@@ -110,16 +116,35 @@
 
 					}
 				*/
+
+				$('#nome, #email').focus((e) => {
+					//console.log('Esse elemento HTML recebeu o foco (nome)')
+					$(e.target).addClass('inputFocado')
+				})
+				
+
+				$('#nome, #email').blur((e) => {
+					//console.log('Esse elemento HTML perdeu o foco (nome)')
+					$(e.target).removeClass('inputFocado')
+				})
+				
+
+				$('#opcao').change((e) => {
+					console.log($(e.target).val())
+				})
+
+				$('#form').submit((e) => {
+					e.preventDefault()
+					console.log('Formulário enviado')
+				})
+
+				$('a').click((e) => {
+					e.preventDefault()
+				})
 					
 
 				})
-	
-						
-				
-				
 			
-
-			})
 		</script>
 	</head>
 
@@ -160,22 +185,26 @@
 			<hr />
 
 			<h3>Formulário</h3>
-			<form>
+			<form id="form">
 				<span>Nome:</span>
-				<input type="text" />
+				<input id="nome" type="text" />
 
 				<span>E-mail:</span>
-				<input type="text" />
+				<input id="email" type="text" />
 
 				<span>Motivo do contato:</span>
-				<select>
+				<select id="opcao">
 					<option value="">-- Selecione --</option>
 					<option value="duvida">Dúvida</option>
 					<option value="sugestao">Sugestão</option>
 				</select>
 				
-				<button type="button">Enviar</button>
+				<button type="submit">Enviar</button>
 			</form>
+
+			<br>
+
+			<a href="http://www.google.com.br">Google</a>
 		</div>
 	</body>
 
