@@ -1,5 +1,9 @@
 <?php
 
-    echo 'Isso está funcionando';
+	require_once "../vendor/autoload.php";
 
-?>    
+	$route = new \App\Route;
+	
+	
+
+?>
