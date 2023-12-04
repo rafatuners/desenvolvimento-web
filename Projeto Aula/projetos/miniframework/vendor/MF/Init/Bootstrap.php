@@ -3,16 +3,16 @@
 namespace MF\Init;
 
 abstract class Bootstrap {
-    private $routes;
+	private $routes;
 
-    abstract protected function initRoutes();
+	abstract protected function initRoutes(); 
 
 	public function __construct() {
 		$this->initRoutes();
 		$this->run($this->getUrl());
 	}
 
-    public function getRoutes() {
+	public function getRoutes() {
 		return $this->routes;
 	}
 
@@ -20,7 +20,7 @@ abstract class Bootstrap {
 		$this->routes = $routes;
 	}
 
-    protected function run($url) {
+	protected function run($url) {
 		foreach ($this->getRoutes() as $key => $route) {
 			if($url == $route['route']) {
 				$class = "App\\Controllers\\".ucfirst($route['controller']);
@@ -34,12 +34,9 @@ abstract class Bootstrap {
 		}
 	}
 
-    protected function getUrl() {
+	protected function getUrl() {
 		return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 	}
-
 }
-
-
 
 ?>
