@@ -10,6 +10,7 @@ class IndexController extends Action {
 
 	public function index() {	
 		
+		$this->view->login = isset($_GET['login']) ? $_GET['login'] : '';
 		$this->render('index');
 	}
 	
@@ -18,7 +19,7 @@ class IndexController extends Action {
 		$this->view->usuario = array(
 			'nome' => '',
 			'email' => '',
-			'senha' => ''
+			'senha' => ' '
 		);
 
 		$this->view->erroCadastro = false;
